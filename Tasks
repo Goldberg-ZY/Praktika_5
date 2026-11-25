@@ -1,0 +1,88 @@
+Task_1
+TAX_RATE = 0.13
+income = float(input("Введите годовой доход в рублях: "))
+tax = income * TAX_RATE
+income_after_tax = income - tax
+print(f"Общий доход: {income:,.2f} руб.".replace(",", " "))
+print(f"Сумма налога: {tax:,.2f} руб.".replace(",", " "))
+print(f"Доход на руки: {income_after_tax:,.2f} руб.".replace(",", " "))
+Task_2
+
+weight, height = map(float, input("Введите вес (кг) и рост (м) через пробел: ").split())
+bmi = weight / (height * height)
+print(f"Рассчитанный ИМТ: {bmi:.1f}")
+Task_3
+
+USD_TO_RUB = 95.50
+def convert_usd_to_rub(amount_usd):
+"""Переводит сумму из долларов в рубли."""
+return amount_usd * USD_TO_RUB
+amount_usd = float(input("Введите сумму в долларах: "))
+amount_rub = convert_usd_to_rub(amount_usd)
+print(f"{amount_usd:.2f} USD = {amount_rub:.2f} RUB")
+Task_4
+
+import math
+def calculate_rectangle_area(width, height):
+"""Вычисляет площадь прямоугольника."""
+return width * height
+def calculate_circle_area(radius):
+"""Вычисляет площадь круга."""
+return math.pi * radius ** 2
+width, height = map(float, input("Введите ширину и высоту прямоугольника: ").split())
+rectangle_area = calculate_rectangle_area(width, height)
+print(f"Площадь прямоугольника: {rectangle_area:.2f}")
+radius = float(input("Введите радиус круга: "))
+circle_area = calculate_circle_area(radius)
+print(f"Площадь круга: {circle_area:.2f}")
+Task_5
+
+BANKNOTES = [5000, 2000, 1000, 500, 200, 100]
+amount = int(input("Введите сумму для снятия (кратно 100): "))
+if amount <= 0 or amount % 100 != 0:
+print("Ошибка: сумма должна быть положительной и кратной 100.")
+else:
+print("Банкомат выдаст:")
+for banknote in BANKNOTES:
+count = amount // banknote
+amount = amount % banknote
+if count > 0:
+ print(f"{banknote} руб. — {count} шт.")
+if amount > 0:
+print("Не удалось выдать всю сумму.")
+Task_6
+
+import math
+def calculate_distance(x1, y1, x2, y2):
+"""Вычисляет расстояние между двумя точками."""
+return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+def calculate_triangle_area(a, b, c):
+"""Вычисляет площадь треугольника по формуле Герона."""
+semi_perimeter = (a + b + c) / 2
+return math.sqrt)
+semi_perimeter
+* (semi_perimeter - a)
+* (semi_perimeter - b)
+* (semi_perimeter - c)
+x1, y1 = map(float, input("Введите координаты точки A: ").split())
+x2, y2 = map(float, input("Введите координаты точки B: ").split())
+x3, y3 = map(float, input("Введите координаты точки C: ").split())
+side_a = calculate_distance(x1, y1, x2, y2)
+side_b = calculate_distance(x2, y2, x3, y3)
+side_c = calculate_distance(x3, y3, x1, y1)
+area = calculate_triangle_area(side_a, side_b, side_c)
+print(f"Площадь треугольника: {area:.2f}")
+
+Task_7
+FUEL_PRICE = 49.50
+def calculate_trip_cost(distance_km, fuel_per_100_km):
+"""Рассчитывает расход топлива и его стоимость для поездки."""
+fuel_needed = distance_km * fuel_per_100_km / 100
+total_cost = fuel_needed * FUEL_PRICE
+return fuel_needed, total_cost
+distance_km, fuel_per_100_km = map()
+float,
+input("Введите расстояние (км) и расход топлива (л/100 км): ").split()
+fuel_needed, total_cost = calculate_trip_cost(distance_km, fuel_per_100_km)
+print(f"Потребуется бензина: {fuel_needed:.2f} л")
+print(f"Стоимость бензина: {total_cost:.2f} руб.")
