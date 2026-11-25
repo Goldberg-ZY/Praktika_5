@@ -15,7 +15,6 @@ Task_3
 
 USD_TO_RUB = 95.50
 def convert_usd_to_rub(amount_usd):
-"""Переводит сумму из долларов в рубли."""
 return amount_usd * USD_TO_RUB
 amount_usd = float(input("Введите сумму в долларах: "))
 amount_rub = convert_usd_to_rub(amount_usd)
@@ -24,10 +23,8 @@ Task_4
 
 import math
 def calculate_rectangle_area(width, height):
-"""Вычисляет площадь прямоугольника."""
 return width * height
 def calculate_circle_area(radius):
-"""Вычисляет площадь круга."""
 return math.pi * radius ** 2
 width, height = map(float, input("Введите ширину и высоту прямоугольника: ").split())
 rectangle_area = calculate_rectangle_area(width, height)
@@ -54,10 +51,8 @@ Task_6
 
 import math
 def calculate_distance(x1, y1, x2, y2):
-"""Вычисляет расстояние между двумя точками."""
 return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
 def calculate_triangle_area(a, b, c):
-"""Вычисляет площадь треугольника по формуле Герона."""
 semi_perimeter = (a + b + c) / 2
 return math.sqrt)
 semi_perimeter
@@ -76,7 +71,6 @@ print(f"Площадь треугольника: {area:.2f}")
 Task_7
 FUEL_PRICE = 49.50
 def calculate_trip_cost(distance_km, fuel_per_100_km):
-"""Рассчитывает расход топлива и его стоимость для поездки."""
 fuel_needed = distance_km * fuel_per_100_km / 100
 total_cost = fuel_needed * FUEL_PRICE
 return fuel_needed, total_cost
